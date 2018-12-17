@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding_margin_16dp">
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/login_facebook_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_facebook_custom_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/facebook_selector"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/padding_margin_10dp"
+            android:paddingTop="@dimen/padding_margin_10dp"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:src="@drawable/ic_facebook" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:gravity="center_vertical"
+                android:text="@string/login_facebook"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/normal_medium_font_size" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

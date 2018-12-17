@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+
+
+    <!--<android.support.v7.widget.Toolbar-->
+    <!--android:id="@+id/toolbar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/color_transparent"-->
+    <!--android:minHeight="?attr/actionBarSize">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="170dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:src="@drawable/recharge_logo"/>-->
+    <!--</android.support.v7.widget.Toolbar>-->
+
+    <include layout="@layout/layout_toolbar"></include>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+            <!--android:id="@+id/swiperefresh"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ll_empty_data"
+            android:visibility="gone"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your Search not Found!"
+                android:id="@+id/tv_empty_data"
+                android:gravity="center"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="@dimen/padding_margin_40dp"
+                android:layout_marginRight="@dimen/padding_margin_40dp"
+                android:textColor="@color/color_white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please input another keyword!"
+                android:id="@+id/tv_empty_data_line2"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/padding_margin_10dp"
+                android:layout_marginLeft="@dimen/padding_margin_40dp"
+                android:layout_marginRight="@dimen/padding_margin_40dp"
+                android:textColor="@color/color_white"
+                android:enabled="true"/>
+        </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llShowTerminal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none" />
+
+            </LinearLayout>
+        <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabAddNewTerminal"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="20dp"
+            android:src="@drawable/ic_action_name"
+            app:backgroundTint="#91c746"
+            app:fabSize="normal" />
+    </android.support.design.widget.CoordinatorLayout>
+
+</LinearLayout>

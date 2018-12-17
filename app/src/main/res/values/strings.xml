@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Terminal Book_dev</string>
+    <string name="app_name_main">Terminal Book</string>
+
+    <!--LOGIN-->
+    <string name="login_title">Login Screen</string>
+    <string name="home_title">Home Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="name">Name</string>
+    <string name="login_facebook">Log in with Facebook</string>
+    <string name="login_google">Sign in with Google</string>
+    <string name="change_password_success">Success change password</string>
+    <string name="forget_password">Please check your email</string>
+
+    <!--FIREBASE REMOTE CONFIG DIALOG-->
+    <string name="maintenance_title">Maintenance is underway</string>
+    <string name="force_update_title">Please update your application</string>
+    <string name="suggest_update_title">Update is available</string>
+    <string name="exit_button_title">Exit</string>
+    <string name="update_button_title">Update</string>
+    <string name="continue_button_title">Continue</string>
+    <string name="title_activity_maps">Map</string>
+</resources>

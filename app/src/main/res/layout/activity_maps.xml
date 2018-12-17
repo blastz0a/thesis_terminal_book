@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fl_maps">
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="template.solainteractive.com.androidsolatemplate.view.MapsActivity" />
+        <include layout="@layout/layout_toolbar_2"></include>
+
+        <Button
+            android:id="@+id/btnConfirmLoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:layout_margin="23dp"
+            android:background="@drawable/my_button"
+            android:padding="10dp"
+            android:paddingRight="10dp"
+            android:text="CONFIRM LOCATION"
+            android:textSize="20dp"
+            android:textColor="@color/color_white" />
+
+        <ImageView
+            android:id="@+id/ivMyLoc"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="85dp"
+            android:layout_marginRight="23dp"
+            android:src="@drawable/marker" />
+
+        <LinearLayout
+            android:id="@+id/locationMarker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:paddingBottom="115dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/locationMarkertext"
+                android:layout_width="205dp"
+                android:layout_height="75dp"
+                android:background="@drawable/mbackgound"
+                android:gravity="center"
+                android:paddingBottom="30dp"
+                android:scrollbarSize="30dp"
+                android:text=" Set your Location "
+                android:textColor="@android:color/black"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/imageMarker"
+                android:layout_width="59dp"
+                android:layout_height="71dp"
+                android:src="@drawable/ic_marker" />
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#91c746">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="toolbar_title"
+                android:textSize="@dimen/padding_margin_20dp"
+                android:id="@+id/tvToolbar"
+                android:textColor="@color/color_white"
+                />
+
+    </android.support.v7.widget.Toolbar>
+</android.support.design.widget.AppBarLayout>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "165461179105",
+    "firebase_url": "https://android-sola-template-dev.firebaseio.com",
+    "project_id": "android-sola-template-dev",
+    "storage_bucket": "android-sola-template-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165461179105:android:5b50308fc65cd92e",
+        "android_client_info": {
+          "package_name": "template.solainteractive.com.androidsolatemplate.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "165461179105-nh010b1gh9k2toi663uud66j87vfht6h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD277SECEbIEDGY8fXpSJAOqLndxeTN2Cc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "716967068260",
+    "firebase_url": "https://android-sola-template.firebaseio.com",
+    "project_id": "android-sola-template",
+    "storage_bucket": "android-sola-template.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:716967068260:android:eac6f8348d9e742b",
+        "android_client_info": {
+          "package_name": "template.solainteractive.com.androidsolatemplate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "716967068260-mc5vnsfaj14lcka7mpo1talai9koe51h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "template.solainteractive.com.androidsolatemplate",
+            "certificate_hash": "7c703c623e96807c215166b71d23576484320200"
+          }
+        },
+        {
+          "client_id": "716967068260-e7v9731q6hscodp6am0hi5aa00d8937n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsR-uU4btITu-DTBRg1OsMszAIoygO4ME"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "716967068260-e7v9731q6hscodp6am0hi5aa00d8937n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

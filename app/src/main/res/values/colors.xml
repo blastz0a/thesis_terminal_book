@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#282fa9</color>
+    <color name="colorAccent">#34B44A</color>
+
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_black">#000000</color>
+
+    <color name="color_transparent">#00000000</color>
+    <color name="color_dark_blue_primary">#003366</color>
+
+    <!--RED-->
+    <color name="color_red_200">#EF9A9A</color>
+    <color name="color_red_500">#F44336</color>
+    <color name="color_red_700">#D32F2F</color>
+    <color name="color_red_800">#C62828</color>
+    <color name="color_red_800_alpha">#BFC62828</color>
+    <color name="color_red_900">#B71C1C</color>
+    <color name="color_red_A700">#D50000</color>
+    <color name="color_red_sunday">#ffff0000</color>
+
+
+    <!--INDIGO-->
+    <color name="color_indigo_500">#3F51B5</color>
+    <color name="color_blue_800">#1565C0</color>
+    <color name="color_blue_900">#0D47A1</color>
+    <color name="color_indigo_900">#1A237E</color>
+    <color name="color_blue_very_dark">#003865</color>
+
+    <!--GREY-->
+    <color name="color_grey_50">#FAFAFA</color>
+    <color name="color_grey_100">#F5F5F5</color>
+    <color name="color_grey_200">#EEEEEE</color>
+    <color name="color_grey_300">#E0E0E0</color>
+    <color name="color_grey_400">#CBCBCB</color>
+    <color name="color_grey_500">#9E9E9E</color>
+    <color name="color_grey_600">#757575</color>
+    <color name="color_grey_700">#616161</color>
+    <color name="color_grey_800">#424242</color>
+    <color name="color_grey_900">#212121</color>
+    <color name="color_silver">#C0C0C0</color>
+    <color name="color_grey_800_alpha">#80424242</color>
+    <color name="color_grey_500_alpha">#809E9E9E</color>
+    <color name="color_grey_300_alpha">#1A9E9E9E</color>
+    <color name="color_grey_400_alpha">#80CBCBCB</color>
+    <color name="color_grey_100_alpha">#80F5F5F5</color>
+
+    <color name="color_grey">#545454</color>
+
+    <color name="color_gold_dark">#a8702b</color>
+    <color name="color_gold_center">#efd18b</color>
+    <color name="color_gold_light">#ecb163</color>
+
+    <color name="color_green_300">#81C784</color>
+    <color name="color_green_400">#66BB6A</color>
+    <color name="color_green_500">#34B44A</color>
+
+    <!--RATING BAR-->
+    <color name="color_rating_bar_on">#FDD835</color>
+    <color name="color_rating_bar_off">#CECECF</color>
+
+
+    <!--CALENDAR-->
+    <color name="today">#4b82ff</color>
+    <color name="greyed_out">#c7c7c7</color>
+
+    <color name="summer">#44eebd82</color>
+    <color name="fall">#44d8d27e</color>
+    <color name="winter">#44a1c1da</color>
+    <color name="spring">#448da64b</color>
+
+    <color name="color_black_87_percent">#DE000000</color>
+    <color name="color_black_55_percent">#8C000000</color>
+    <color name="color_black_54_percent">#8A000000</color>
+    <color name="color_black_38_percent">#61000000</color>
+
+
+    <color name="color_blue_facebook">#3a5998</color>
+    <color name="color_blue_facebook_selected">#314c83</color>
+
+
+    <color name="color_red_google">#f14336</color>
+    <color name="color_red_button_pressed">#c20000</color>
+
+    <!--LOGIN-->
+    <color name="color_grey_login_register">#bebecc</color>
+    <color name="login_textbox">#4e596a</color>
+    <color name="login_background">#455367</color>
+    <color name="login_button">#28ae61</color>
+
+    <color name="color_grey_google_selected">#f4f4f4</color>
+    <color name="blue_button">#2CACEE</color>
+</resources>
