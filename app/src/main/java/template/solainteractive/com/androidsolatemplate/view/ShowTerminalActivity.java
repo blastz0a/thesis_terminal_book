@@ -122,7 +122,6 @@ public class ShowTerminalActivity extends BaseActivity implements ShowTerminalCo
 
         //INI BARU
         searchText.addTextChangedListener(textWatcher);
-        keywords = searchText.getText().toString();
 
 //        searchText.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -179,6 +178,8 @@ public class ShowTerminalActivity extends BaseActivity implements ShowTerminalCo
     @Override
     public void setAdapter(TerminalModel terminalModel, List<Terminal> terminalList) {
         onfabAddNewTerminalClicked();
+        llShowTerminal.setVisibility(View.VISIBLE);
+        emptyData.setVisibility(View.GONE);
         TerminalAdapter terminalAdapter = new TerminalAdapter(terminalModel.getTerminalList(), ShowTerminalActivity.this);
         recyclerView.setAdapter(terminalAdapter);
         //set text jam
@@ -351,6 +352,9 @@ public class ShowTerminalActivity extends BaseActivity implements ShowTerminalCo
             @Override
             public void onClick(View v) {
                 keywords = searchText.getText().toString();
+                if (keywords == ""){
+                    showTerminalPresenter.onGetTerminalAPI();
+                }
                 showTerminalPresenter.onSearchTerminal(keywords);
             }
         });

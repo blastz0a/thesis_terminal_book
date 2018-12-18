@@ -113,7 +113,7 @@ public class ShowTerminalPresenter implements ShowTerminalContract.Presenter{
 
     @Override
     public void onSuccessSearchTerminal(TerminalModel terminalModel, List<Terminal> terminalList) {
-        if (terminalList.size() > 0 ){
+        if (terminalList.size() !=0 ){
             showTerminalView.setAdapter(terminalModel, terminalList);
             showTerminalView.dismissProgressDialog();
         }
