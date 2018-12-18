@@ -67,10 +67,10 @@ public class ShowTerminalActivity extends BaseActivity implements ShowTerminalCo
 //    AppBarLayout appBarSearch;
 
     //INI BIND BARU UNTUK TOOLBAR SEARCH
-    @BindView(R.id.my_toolbar)
-    Toolbar myToolbar;
-    @BindView(R.id.search_bar_edit_text)
-    EditText searchText;
+//    @BindView(R.id.my_toolbar)
+//    Toolbar myToolbar;
+    @BindView(R.id.et_search)
+    EditText etSearch;
     @BindView(R.id.search_bar_hint_icon)
     ImageView ivSearch;
     @BindView(R.id.ll_empty_data)
@@ -121,7 +121,7 @@ public class ShowTerminalActivity extends BaseActivity implements ShowTerminalCo
         });
 
         //INI BARU
-        searchText.addTextChangedListener(textWatcher);
+        etSearch.addTextChangedListener(textWatcher);
 
 //        searchText.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -351,7 +351,7 @@ public class ShowTerminalActivity extends BaseActivity implements ShowTerminalCo
         ivSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                keywords = searchText.getText().toString();
+                keywords = etSearch.getText().toString();
                 if (keywords == ""){
                     showTerminalPresenter.onGetTerminalAPI();
                 }

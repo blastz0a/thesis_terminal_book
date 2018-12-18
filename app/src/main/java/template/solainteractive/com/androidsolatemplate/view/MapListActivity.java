@@ -209,6 +209,8 @@ public class MapListActivity extends AppCompatActivity implements MapListContrac
 
         mMap.setMyLocationEnabled(false);
         mMap.getUiSettings().setMyLocationButtonEnabled(false);
+        mMap.getUiSettings().setCompassEnabled(false);
+
 
         CameraPosition cameraPosition = new CameraPosition.Builder()
                 .target(new LatLng(-6.175392, 106.827153)) //-0.782975
@@ -221,11 +223,11 @@ public class MapListActivity extends AppCompatActivity implements MapListContrac
                 ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             return;
         }
-
         googleMap.setMyLocationEnabled(true);
         googleMap.getUiSettings().setMyLocationButtonEnabled(false);
         googleMap.getUiSettings().setCompassEnabled(false);
         googleMap.getUiSettings().setMapToolbarEnabled(true);
+        googleMap.getUiSettings().setCompassEnabled(false);
 
         mGoogleApiClient.disconnect();
 
