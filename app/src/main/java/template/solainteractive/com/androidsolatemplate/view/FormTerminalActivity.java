@@ -1089,7 +1089,7 @@ public class FormTerminalActivity extends BaseActivity implements FormTerminalCo
                             setShowLocation();
                         }
                     }else{
-                        onBackPressed();
+
                     }
                     return;
             }

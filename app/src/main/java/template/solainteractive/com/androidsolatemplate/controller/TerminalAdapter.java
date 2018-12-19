@@ -3,6 +3,7 @@ package template.solainteractive.com.androidsolatemplate.controller;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
+import android.location.Address;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -53,11 +54,20 @@ public class TerminalAdapter extends RecyclerView.Adapter<TerminalAdapter.ViewHo
         } else if(listItems.get(position).getTerminalTypeId()==3) {
             holder.textViewTypeId.setText("Medium");
         }
+        String fullAddress = listItems.get(position).getTerminalAddress();
+        String usedAddress;
+        if (fullAddress!=null){
+            String[] splitAddress = fullAddress.split(",");
+            usedAddress= splitAddress[0];
+        }else {
+            usedAddress = "";
+        }
+
 
         holder.textViewOpen.setText(listItems.get(position).getTerminalOpenTime()+" - ");
         holder.textViewClose.setText(listItems.get(position).getTerminalClosedTime());
-        holder.textViewLat.setText(String.valueOf(listItems.get(position).getTerminalLatitude()));
-        holder.textViewLong.setText(String.valueOf(listItems.get(position).getTerminalLongitude()));
+        holder.textViewAddress.setText(String.valueOf(listItems.get(position).getTerminalAddress()));
+//        holder.textViewLong.setText(String.valueOf(listItems.get(position).getTerminalLongitude()));
 
 //        if(listItems.get(position).getAvatarPicture()==null || listItems.get(position).getAvatarPicture()==" ") {
 //            Glide.with(context)
@@ -98,8 +108,8 @@ public class TerminalAdapter extends RecyclerView.Adapter<TerminalAdapter.ViewHo
     public class ViewHolder extends RecyclerView.ViewHolder{
         public TextView textViewTypeId;
         public TextView textViewName;
-        public TextView textViewLat;
-        public TextView textViewLong;
+        public TextView textViewAddress;
+//        public TextView textViewLong;
         public TextView textViewOpen;
         public TextView textViewClose;
         public ImageView ivTerminal;
@@ -111,8 +121,8 @@ public class TerminalAdapter extends RecyclerView.Adapter<TerminalAdapter.ViewHo
             cardView = itemView.findViewById(R.id.cvTerminal);
             textViewTypeId = itemView.findViewById(R.id.tv_terminal_type_id);
             textViewName = itemView.findViewById(R.id.tv_terminal_name);
-            textViewLat = itemView.findViewById(R.id.tv_terminal_latitude);
-            textViewLong = itemView.findViewById(R.id.tv_terminal_longitude);
+            textViewAddress = itemView.findViewById(R.id.tv_terminal_address);
+//            textViewLong = itemView.findViewById(R.id.tv_terminal_longitude);
             textViewOpen = itemView.findViewById(R.id.tv_terminal_open);
             textViewClose = itemView.findViewById(R.id.tv_terminal_closed);
             ivTerminal = itemView.findViewById(R.id.ivTerminal);

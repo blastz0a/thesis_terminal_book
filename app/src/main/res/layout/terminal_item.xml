@@ -63,29 +63,13 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/ic_terminal_latitude"
+                    android:id="@+id/ic_terminal_address"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/img_latitude" />
+                    android:src="@drawable/img_address" />
 
                 <TextView
-                    android:id="@+id/tv_terminal_latitude"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:fontFamily="sans-serif"
-                    android:paddingLeft="6dp"
-                    android:textColor="@color/color_grey_500"
-                    android:textSize="14dp"
-                    android:text="0.0"/>
-
-                <ImageView
-                    android:id="@+id/ic_terminal_longitude"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/img_logitude" />
-
-                <TextView
-                    android:id="@+id/tv_terminal_longitude"
+                    android:id="@+id/tv_terminal_address"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:fontFamily="sans-serif"
@@ -93,6 +77,22 @@
                     android:textColor="@color/color_grey_500"
                     android:textSize="14dp"
                     android:text="0.0"/>
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/ic_terminal_longitude"-->
+                    <!--android:layout_width="20dp"-->
+                    <!--android:layout_height="20dp"-->
+                    <!--android:src="@drawable/img_logitude" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_terminal_longitude"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:fontFamily="sans-serif"-->
+                    <!--android:paddingLeft="6dp"-->
+                    <!--android:textColor="@color/color_grey_500"-->
+                    <!--android:textSize="14dp"-->
+                    <!--android:text="0.0"/>-->
             </LinearLayout>
 
             <LinearLayout

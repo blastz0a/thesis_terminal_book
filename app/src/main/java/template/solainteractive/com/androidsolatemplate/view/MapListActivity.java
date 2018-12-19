@@ -1,11 +1,9 @@
 package template.solainteractive.com.androidsolatemplate.view;
 
 import android.Manifest;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
-import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -29,7 +27,6 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
@@ -71,14 +68,14 @@ public class MapListActivity extends AppCompatActivity implements MapListContrac
     LinearLayout linearNama;
     @BindView(R.id.tv_terminal_type_id)
     TextView tvTerminalTypeId;
-    @BindView(R.id.ic_terminal_latitude)
-    ImageView icTerminalLatitude;
-    @BindView(R.id.tv_terminal_latitude)
-    TextView tvTerminalLatitude;
-    @BindView(R.id.ic_terminal_longitude)
-    ImageView icTerminalLongitude;
-    @BindView(R.id.tv_terminal_longitude)
-    TextView tvTerminalLongitude;
+    //    @BindView(R.id.ic_terminal_latitude)
+//    ImageView icTerminalLatitude;
+//    @BindView(R.id.tv_terminal_latitude)
+//    TextView tvTerminalLatitude;
+//    @BindView(R.id.ic_terminal_longitude)
+//    ImageView icTerminalLongitude;
+//    @BindView(R.id.tv_terminal_longitude)
+//    TextView tvTerminalLongitude;
     @BindView(R.id.linearLatLong)
     LinearLayout linearLatLong;
     @BindView(R.id.ic_terminal_open_time)
@@ -105,6 +102,10 @@ public class MapListActivity extends AppCompatActivity implements MapListContrac
     ImageView toolbarTitle;
     @BindView(R.id.toolbarList)
     Toolbar toolbarList;
+    @BindView(R.id.ic_terminal_address)
+    ImageView icTerminalAddress;
+    @BindView(R.id.tv_terminal_address)
+    TextView tvTerminalAddress;
 
     private MapListContract.Presenter mapListPresenter;
 
@@ -305,8 +306,9 @@ public class MapListActivity extends AppCompatActivity implements MapListContrac
         llTerminal.setVisibility(View.VISIBLE);
         tvTerminalName.setText(terminalList.get(index).getTerminalName());
         tvTerminalTypeId.setText(terminalList.get(index).getTerminalId());
-        tvTerminalLatitude.setText(String.valueOf(terminalList.get(index).getTerminalLatitude()));
-        tvTerminalLongitude.setText(String.valueOf(terminalList.get(index).getTerminalLatitude()));
+        tvTerminalAddress.setText(terminalList.get(index).getTerminalAddress());
+//        tvTerminalLatitude.setText(String.valueOf(terminalList.get(index).getTerminalLatitude()));
+//        tvTerminalLongitude.setText(String.valueOf(terminalList.get(index).getTerminalLatitude()));
         tvTerminalOpen.setText(terminalList.get(index).getTerminalOpenTime());
         tvTerminalClosed.setText(terminalList.get(index).getTerminalClosedTime());
 
@@ -351,12 +353,12 @@ public class MapListActivity extends AppCompatActivity implements MapListContrac
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults){
-        switch (requestCode){
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        switch (requestCode) {
             case MY_PERMISSIONS_REQUEST_LOCATION: {
                 //KALAU USER ALLOW PADA PERMISSION ACCESS LOCATION
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                    if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
 //                        LocationManager locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
 //                        boolean network_enabled = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
 //
@@ -369,7 +371,7 @@ public class MapListActivity extends AppCompatActivity implements MapListContrac
 //                            }
 //                        }
                     }
-                }else{
+                } else {
                     onBackPressed();
                 }
                 return;
@@ -392,6 +394,6 @@ public class MapListActivity extends AppCompatActivity implements MapListContrac
 
     @Override
     public void onInfoWindowClick(Marker marker) {
-        
+
     }
 }
