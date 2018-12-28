@@ -25,6 +25,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -41,6 +43,7 @@ import template.solainteractive.com.androidsolatemplate.model.Terminal;
 import template.solainteractive.com.androidsolatemplate.model.TerminalModel;
 import template.solainteractive.com.androidsolatemplate.view.SignIn.ChangePasswordActivity;
 import template.solainteractive.com.androidsolatemplate.view.SignIn.SigninActivity;
+import template.solainteractive.com.androidsolatemplate.view_interface.SnackBarOnClick;
 
 
 public class ShowTerminalActivity extends BaseActivity implements ShowTerminalContract.View {
@@ -305,7 +308,15 @@ public class ShowTerminalActivity extends BaseActivity implements ShowTerminalCo
 
     @Override
     public void getRefreshTerminalList() {
-        Utils.showSnackBar(llShowTerminal,"Delete Success");
+
+//        Utils.showInfiniteSnackBar(llShowTerminal, "Delete Success", "OK", new SnackBarOnClick() {
+//            @Override
+//            public void onSnackBarClick() {
+//                showTerminalPresenter.onGetTerminalAPI();
+//            }
+//        });
+//        Utils.showSnackBar(llShowTerminal,"Delete Success");
+        Toast.makeText(this,"Success Delete Terminal",Toast.LENGTH_LONG).show();
         Intent refresh = new Intent(this, ShowTerminalActivity.class);
         refresh.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(refresh);

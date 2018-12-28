@@ -523,20 +523,20 @@ public class FormTerminalActivity extends BaseActivity implements FormTerminalCo
                 @Override
                 public void onClick(View v) {
                     postUpdateTerminalAPI();
-                    System.out.println("id : " + scanResult);
-                    System.out.println("typeID : " + typeID);
-                    System.out.println("name : " + name);
-                    System.out.println("address : " + address);
-                    System.out.println("metatag : " + metatag);
-                    System.out.println("open : " + timeOpen);
-                    System.out.println("close : " + timeClose);
-                    System.out.println("network : " + network);
-                    System.out.println("postal : " + postalCode);
-                    System.out.println("desc : " + description);
-                    System.out.println("lat : " + currLatitude);
-                    System.out.println("long : " + currLongitude);
-                    System.out.println("active : " + activeStatus);
-                    System.out.println("RateID : " + choosenOptionID);
+//                    System.out.println("id : " + scanResult);
+//                    System.out.println("typeID : " + typeID);
+//                    System.out.println("name : " + name);
+//                    System.out.println("address : " + address);
+//                    System.out.println("metatag : " + metatag);
+//                    System.out.println("open : " + timeOpen);
+//                    System.out.println("close : " + timeClose);
+//                    System.out.println("network : " + network);
+//                    System.out.println("postal : " + postalCode);
+//                    System.out.println("desc : " + description);
+//                    System.out.println("lat : " + currLatitude);
+//                    System.out.println("long : " + currLongitude);
+//                    System.out.println("active : " + activeStatus);
+//                    System.out.println("RateID : " + choosenOptionID);
                 }
             });
         }
@@ -732,11 +732,19 @@ public class FormTerminalActivity extends BaseActivity implements FormTerminalCo
     @Override
     public void setOnSuccessPostTerminalAPI(MainResponse mainResponse) {
         dismissProgressDialog();
-        Utils.showSnackBar(tvID, mainResponse.getMessage());
-        Toast.makeText(FormTerminalActivity.this, "SUCCESS", Toast.LENGTH_LONG).show();
-        Intent openIntent = new Intent(FormTerminalActivity.this, ShowTerminalActivity.class);
-        openIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        getApplicationContext().startActivity(openIntent);
+        Utils.showSnackBar(form, mainResponse.getMessage());
+//        Toast.makeText(FormTerminalActivity.this, "Success Add Terminal", Toast.LENGTH_LONG).show();
+        new android.os.Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent openIntent = new Intent(FormTerminalActivity.this,ShowTerminalActivity.class);
+                openIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                getApplication().startActivity(openIntent);
+            }
+        },500);
+//        Intent openIntent = new Intent(FormTerminalActivity.this, ShowTerminalActivity.class);
+//        openIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//        getApplicationContext().startActivity(openIntent);
     }
 
     @Override
@@ -754,8 +762,8 @@ public class FormTerminalActivity extends BaseActivity implements FormTerminalCo
     @Override
     public void setOnSuccessUpdateTerminalAPI(MainResponse mainResponse) {
         dismissProgressDialog();
-        Utils.showSnackBar(tvID, mainResponse.getMessage());
-        Toast.makeText(FormTerminalActivity.this, "SUCCESS", Toast.LENGTH_LONG).show();
+//        Utils.showSnackBar(form, mainResponse.getMessage());
+        Toast.makeText(FormTerminalActivity.this, "Success Update Terminal", Toast.LENGTH_LONG).show();
         Intent openIntent = new Intent(FormTerminalActivity.this, ShowTerminalActivity.class);
         openIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         getApplicationContext().startActivity(openIntent);
