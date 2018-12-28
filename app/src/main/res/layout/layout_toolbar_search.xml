@@ -7,7 +7,7 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:background="#91c746"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
@@ -22,19 +22,29 @@
 
             <EditText
                 android:id="@+id/search_bar_edit_text"
-                android:layout_width="0dp"
-                android:layout_height="32dp"
-                android:layout_weight="1"
-                android:background="#91c746"
-                android:backgroundTint="#91c746"
-                android:hint="Search Keywords"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/color_white"
+                android:hint="Search keywords . . ."
+                android:singleLine="true"
+                android:paddingLeft="@dimen/padding_margin_10dp"
                 android:inputType="textCapWords"
-                android:textColorHint="#ffffe0" />
+                android:layout_weight="0.95"
+                android:textColorHint="@android:color/darker_gray"/>
             <ImageView
-                android:id="@+id/search_bar_hint_icon"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:src="@android:drawable/ic_menu_search" />
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="0.05"
+                android:layout_marginRight="15dp"
+                android:background="@color/color_white"
+                android:src="@android:drawable/ic_menu_search"
+                android:id="@+id/search_bar_hint_icon" />
 
         </LinearLayout>
 

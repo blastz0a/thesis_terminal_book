@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import okhttp3.internal.Util;
 import template.solainteractive.com.androidsolatemplate.BuildConfig;
 import template.solainteractive.com.androidsolatemplate.Contract.SigninContract;
 import template.solainteractive.com.androidsolatemplate.MyApplication;
@@ -85,13 +86,17 @@ public class SigninActivity extends BaseActivity implements SigninContract.View 
                 password = etPassword.getText().toString();
 
                 if (email.isEmpty()) {
-                    Toast.makeText(SigninActivity.this, "Email must be filled!", Toast.LENGTH_SHORT).show();
+                    Utils.showSnackBar(rlSignIn,"Email must be filled");
+//                    Toast.makeText(SigninActivity.this, "Email must be filled!", Toast.LENGTH_SHORT).show();
                 } else if (!email.matches(emailPattern)) {
-                    Toast.makeText(SigninActivity.this, "Email must be match with email Pattern", Toast.LENGTH_SHORT).show();
+                    Utils.showSnackBar(rlSignIn,"Email must be match with email pattern");
+//                    Toast.makeText(SigninActivity.this, "Email must be match with email Pattern", Toast.LENGTH_SHORT).show();
                 } else if (password.isEmpty()) {
-                    Toast.makeText(SigninActivity.this, "Password must be filled!", Toast.LENGTH_SHORT).show();
+                    Utils.showSnackBar(rlSignIn,"Password must be filled");
+//                    Toast.makeText(SigninActivity.this, "Password must be filled!", Toast.LENGTH_SHORT).show();
                 } else if (password.length() < 4 || password.length() > 8) {
-                    Toast.makeText(SigninActivity.this, "Password must be between 4 and 8", Toast.LENGTH_SHORT).show();
+                    Utils.showSnackBar(rlSignIn,"Password must be between 4 and 8");
+//                    Toast.makeText(SigninActivity.this, "Password must be between 4 and 8", Toast.LENGTH_SHORT).show();
                 } else {
                     signInPresenter.onPostLoginAPI(email, password, MyApplication.getInstance().getAccessToken());
                 }

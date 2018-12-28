@@ -74,13 +74,13 @@ public class ShowTerminalPresenterTest {
     public void onFailurGetTerminalTest(){
         presenter.onFailureGetTerminal("RESPONSE ERROR");
         verify(showTerminalView).dismissProgressDialog();
-        verify(showTerminalView).showToast();
+        verify(showTerminalView).showSnackbar();
     }
 
     @Test
     public void onFailurePostLogoutTest(){
         presenter.onFailurePostLogout("RESPONSE ERROR");
-        verify(showTerminalView).showToast();
+        verify(showTerminalView).showSnackbar();
     }
 
     @Test

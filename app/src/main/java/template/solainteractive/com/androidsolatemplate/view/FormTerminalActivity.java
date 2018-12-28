@@ -503,6 +503,12 @@ public class FormTerminalActivity extends BaseActivity implements FormTerminalCo
         postalCode = etPostalCode.getText().toString();
         description = etDescription.getText().toString();
         scanResult = tvScanResult.getText().toString();
+        avatarPicture = getIntent().getExtras().getString("avatar_picture");
+        if (avatarPicture != null){
+            ivTerminal = true;
+        }
+        System.out.println("Avatar Picture : "+avatarPicture);
+        System.out.println("Has Pict : "+ivTerminal);
         activeStatus = String.valueOf(rgTerminalActiveStatus.indexOfChild(findViewById(rgTerminalActiveStatus.getCheckedRadioButtonId())));
 
         if (address.isEmpty() || name.isEmpty() || metatag.isEmpty() || scanResult.isEmpty()

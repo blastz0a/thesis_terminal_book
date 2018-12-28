@@ -50,6 +50,7 @@ import butterknife.ButterKnife;
 import template.solainteractive.com.androidsolatemplate.Contract.MapListContract;
 import template.solainteractive.com.androidsolatemplate.Presenter.MapList.MapListPresenter;
 import template.solainteractive.com.androidsolatemplate.R;
+import template.solainteractive.com.androidsolatemplate.Utils.Utils;
 import template.solainteractive.com.androidsolatemplate.model.Terminal;
 
 public class MapListActivity extends AppCompatActivity implements MapListContract.View,
@@ -287,7 +288,8 @@ public class MapListActivity extends AppCompatActivity implements MapListContrac
 
         centeredMarker(marker.getPosition());
         initTerminalListCard(index);
-        Toast.makeText(this, "Terminal click : " + terminalList.get(index).getTerminalName(), Toast.LENGTH_SHORT).show();
+        Utils.showSnackBar(llMap,"Terminal click : " + terminalList.get(index).getTerminalName());
+//        Toast.makeText(this, "Terminal click : " + terminalList.get(index).getTerminalName(), Toast.LENGTH_SHORT).show();
 
         return true;
     }

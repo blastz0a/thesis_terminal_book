@@ -76,7 +76,7 @@
                     android:paddingLeft="6dp"
                     android:textColor="@color/color_grey_500"
                     android:textSize="14dp"
-                    android:text="0.0"/>
+                    android:text=""/>
 
                 <!--<ImageView-->
                     <!--android:id="@+id/ic_terminal_longitude"-->

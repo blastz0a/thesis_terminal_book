@@ -27,7 +27,7 @@ public class Constants {
 
     public interface URL_API {
 //        String BASE_URL = "https://apidev.recharge.id/backend_recharge_terminalbook/public/api/mobile/";
-        String BASE_URL = "http://192.168.1.208/backend_recharge_terminalbook/public/api/mobile/";
+        String BASE_URL = "http://192.168.1.220/backend_recharge_terminalbook/public/api/mobile/";
 //        String BASE_URL = BuildConfig.BASE_URL;
         //String BASE_URL_RELEASE = "https://apiterminalbook.recharge.id/api/mobile/";
         String UPLOAD = "terminal/upload";
