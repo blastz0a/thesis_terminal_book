@@ -48,7 +48,6 @@ public class ChangePasswordActivity extends BaseActivity implements ChangePasswo
 
         changePasswordPresenter = new ChangePasswordPresenter(this);
 
-//        setupTypeFace();
         changePasswordPresenter.onSetupView();
         setSupportActionBar(toolbarList);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
@@ -65,7 +64,6 @@ public class ChangePasswordActivity extends BaseActivity implements ChangePasswo
 
     @OnClick(R.id.btn_change_password)
     public void onBtnClicked() {
-//        changePassword();
         changePasswordPresenter.onChangePassword(oldPasswordTxt, newPasswordTxt);
     }
 
@@ -82,55 +80,9 @@ public class ChangePasswordActivity extends BaseActivity implements ChangePasswo
 
         @Override
         public void afterTextChanged(Editable s) {
-//            validationChangePassword();
             changePasswordPresenter.onValidateChangePassword();
         }
     };
-
-//    public void setupTypeFace() {
-//        etCurrentPassword.setTypeface(Typeface.DEFAULT);
-//        etNewPassword.setTypeface(Typeface.DEFAULT);
-//        etConfirmPassword.setTypeface(Typeface.DEFAULT);
-//    }
-
-//    public void validationChangePassword() {
-//        oldPasswordTxt = etCurrentPassword.getText().toString();
-//        newPasswordTxt = etNewPassword.getText().toString();
-//        confirmPasswordTxt = etConfirmPassword.getText().toString();
-//
-//        if (oldPasswordTxt.length() != 0 && newPasswordTxt.length() != 0 && confirmPasswordTxt.length() != 0 && !oldPasswordTxt.equals(newPasswordTxt) && newPasswordTxt.equals(confirmPasswordTxt)) {
-//            btnChangePassword.setEnabled(true);
-//        } else {
-//            btnChangePassword.setEnabled(false);
-//        }
-//    }
-
-//    public void changePassword() {
-//        Call call = RetrofitServices.retrofitRequest().changePassword(APIBody.changePassword(oldPasswordTxt, newPasswordTxt));
-//        ConnectionManager connectionManager = new ConnectionManager(ChangePasswordActivity.this);
-//        connectionManager.connect(call, new ConnectionCallback() {
-//            @Override
-//            public void onSuccessResponse(Call call, Response response) {
-//                btnChangePassword.setEnabled(false);
-//                Utils.showInfinteSnackBar(changePassword, getString(R.string.change_password_success), "OK", new SnackBarOnClick() {
-//                    @Override
-//                    public void onSnackBarClick() {
-//                        onBackPressed();
-//                    }
-//                });
-//            }
-//
-//            @Override
-//            public void onFailedResponse(Call call, Response response, String message) {
-//                Utils.showSnackBar(changePassword, message);
-//            }
-//
-//            @Override
-//            public void onFailure(String message) {
-//
-//            }
-//        });
-//    }
 
     public void back() {
         toolbarList.setNavigationOnClickListener(new View.OnClickListener() {
@@ -143,7 +95,7 @@ public class ChangePasswordActivity extends BaseActivity implements ChangePasswo
 
     @Override
     public void setUpToolbar() {
-        Utils.setupAppToolbarForActivity(ChangePasswordActivity.this, toolbarList, "Change Password");
+        Utils.setupAppToolbarForActivity(ChangePasswordActivity.this, toolbarList, getString(R.string.title_activity_change_password));
     }
 
     @Override
@@ -159,7 +111,7 @@ public class ChangePasswordActivity extends BaseActivity implements ChangePasswo
 
     @Override
     public void setOnFailedChangePasswordAPI() {
-        Utils.showSnackBar(changePassword,"Failed Change Password");
+        Utils.showSnackBar(changePassword,getString(R.string.change_password_failed));
     }
 
     @Override

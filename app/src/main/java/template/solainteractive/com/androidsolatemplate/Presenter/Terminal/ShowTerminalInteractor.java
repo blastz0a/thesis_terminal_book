@@ -15,7 +15,6 @@ public class ShowTerminalInteractor implements ShowTerminalContract.Interactor{
 
     private ShowTerminalContract.Presenter showTerminalPresenter;
     private ConnectionManagerPresenter connectionManagerPresenter;
-    private List<Terminal> terminalList;
 
     public ShowTerminalInteractor(ShowTerminalContract.Presenter showTerminalPresenter){
         this.showTerminalPresenter = showTerminalPresenter;

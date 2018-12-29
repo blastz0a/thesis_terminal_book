@@ -5,6 +5,7 @@ import java.util.List;
 import retrofit2.Call;
 import template.solainteractive.com.androidsolatemplate.Contract.ShowTerminalContract;
 import template.solainteractive.com.androidsolatemplate.MyApplication;
+import template.solainteractive.com.androidsolatemplate.R;
 import template.solainteractive.com.androidsolatemplate.Utils.Utils;
 import template.solainteractive.com.androidsolatemplate.connection.APIBody;
 import template.solainteractive.com.androidsolatemplate.connection.RetrofitServices;
@@ -60,13 +61,18 @@ public class ShowTerminalPresenter implements ShowTerminalContract.Presenter{
         showTerminalView.dismissProgressDialog();
 
         // need improvement, create snackbar
-        showTerminalView.intentToSignInActivity(message);
+
+        // after improvemet
+        showTerminalView.showSnackbar(message);
+
+        /*before improvement
+        showTerminalView.intentToSignInActivity(message);*/
     }
 
     @Override
     public void onFailureGetTerminal(String message) {
         showTerminalView.dismissProgressDialog();
-        showTerminalView.showSnackbar();
+        showTerminalView.showSnackbar(message);
     }
 
     @Override
@@ -82,13 +88,13 @@ public class ShowTerminalPresenter implements ShowTerminalContract.Presenter{
 
     @Override
     public void onFailurePostLogout(String message) {
-        showTerminalView.showSnackbar();
+        showTerminalView.showSnackbar(message);
     }
 
     @Override
     public void onDeleteTerminalAPI(String terminalId) {
         showTerminalView.showProgressDialog();
-        Call call = RetrofitServices.retrofitRequest().delete(APIBody.deleteBody(terminalId));
+        Call call = RetrofitServices.retrofitRequest().deleteTerminal(APIBody.deleteTerminalBody(terminalId));
         showTerminalInteractor.initRetrofitDeleteTerminalAPI(call);
     }
 
@@ -103,7 +109,6 @@ public class ShowTerminalPresenter implements ShowTerminalContract.Presenter{
         showTerminalView.dismissProgressDialog();
         showTerminalView.showStatusMessage(mainResponse);
     }
-    //INI FUNCTION BARU
     @Override
     public void onSearchTerminal(String SEARCH_KEYWORDS) {
         showTerminalView.showProgressDialog();
@@ -120,13 +125,12 @@ public class ShowTerminalPresenter implements ShowTerminalContract.Presenter{
         else if (terminalList.size() == 0){
             showTerminalView.dismissProgressDialog();
             showTerminalView.emptyData();
-            showTerminalView.searchMesaage("Your Keywords does not match! input another keywords");
+            showTerminalView.searchMesaage(String.valueOf(R.string.keywords_not_match));
         }
     }
 
     @Override
     public void onFailedSearchTerminal(String message) {
-        showTerminalView.showSnackbar();
+        showTerminalView.showSnackbar(message);
     }
-    // SAMPAI SINI
 }

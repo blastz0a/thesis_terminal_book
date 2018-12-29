@@ -59,16 +59,6 @@ public class TerminalAdapter extends RecyclerView.Adapter<TerminalAdapter.ViewHo
         holder.textViewLat.setText(String.valueOf(listItems.get(position).getTerminalLatitude()));
         holder.textViewLong.setText(String.valueOf(listItems.get(position).getTerminalLongitude()));
 
-//        if(listItems.get(position).getAvatarPicture()==null || listItems.get(position).getAvatarPicture()==" ") {
-//            Glide.with(context)
-//                    .load(R.drawable.recharge_logo)
-//                    .dontAnimate()
-//                    .placeholder(R.drawable.recharge_logo)
-//                    .diskCacheStrategy(DiskCacheStrategy.RESULT)
-//                    .into(holder.ivTerminal);
-////            holder.ivTerminal.setImageResource(R.drawable.recharge_logo);
-//        } else {
-////            System.out.println("link avatar: "+ listItems.get(position).getAvatarPicture());
             Glide.with(context)
                     .load(listItems.get(position).getAvatarPicture())
                     .fitCenter()
@@ -76,8 +66,6 @@ public class TerminalAdapter extends RecyclerView.Adapter<TerminalAdapter.ViewHo
                     .placeholder(R.drawable.recharge_logo)
                     .diskCacheStrategy(DiskCacheStrategy.RESULT)
                     .into(holder.ivTerminal);
-//            Glide.with(context).load(listItems.get(position).getAvatarPicture()).fitCenter().into(holder.ivTerminal);
-//        }
 
         if(listItems.get(position).getTerminalActiveStatus().equals("0")){
             holder.linearInactive.setVisibility(View.VISIBLE);

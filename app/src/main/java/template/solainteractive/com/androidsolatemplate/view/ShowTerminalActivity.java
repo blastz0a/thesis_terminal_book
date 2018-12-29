@@ -55,20 +55,6 @@ public class ShowTerminalActivity extends BaseActivity implements ShowTerminalCo
     RecyclerView recyclerView;
     @BindView(R.id.fabAddNewTerminal)
     FloatingActionButton fabAddNewTerminal;
-//    @BindView(R.id.tv_title_toolbar)
-//    TextView tvTitleToolbar;
-//    @BindView(R.id.et_terminal_search)
-//    EditText etTerminalSearch;
-//    @BindView(R.id.iv_clear)
-//    ImageView ivClear;
-//    @BindView(R.id.toolbar)
-//    Toolbar toolbar;
-//    @BindView(R.id.app_bar_search)
-//    AppBarLayout appBarSearch;
-
-    //INI BIND BARU UNTUK TOOLBAR SEARCH
-//    @BindView(R.id.my_toolbar)
-//    Toolbar myToolbar;
     @BindView(R.id.et_search)
     EditText etSearch;
     @BindView(R.id.search_bar_hint_icon)
@@ -120,16 +106,7 @@ public class ShowTerminalActivity extends BaseActivity implements ShowTerminalCo
             }
         });
 
-        //INI BARU
         etSearch.addTextChangedListener(textWatcher);
-
-//        searchText.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                keywords = searchText.getText().toString();
-//                showTerminalPresenter.onSearchTerminal(keywords);
-//            }
-//        });
     }
 
     @Override
@@ -197,8 +174,8 @@ public class ShowTerminalActivity extends BaseActivity implements ShowTerminalCo
     }
 
     @Override
-    public void showSnackbar() {
-        Utils.showSnackBar(llShowTerminal,"No Internet Connection");
+    public void showSnackbar(String message) {
+        Utils.showSnackBar(llShowTerminal, message);
     }
 
     @Override
@@ -248,17 +225,6 @@ public class ShowTerminalActivity extends BaseActivity implements ShowTerminalCo
 
             @Override
             public void onLongClick(View view, final int position) {
-//                Toast.makeText(ShowTerminalActivity.this, "MAU DELETE YA KAK ?\nHohoho Tidak semudah itu Fergusso", Toast.LENGTH_SHORT).show();
-//////                terminalList.remove(terminalList.get(position).getTerminalId());
-////                position = terminalList.indexOf(terminalModel);
-////                terminalList.remove(position);
-//                showTerminalPresenter.onDeleteTerminalAPI(terminalModel.terminalList.get(position).getTerminalId());
-//                System.out.println("TERMINAL_ID itu ini loh : " + terminalModel.terminalList.get(position).getTerminalId());
-//                terminalList.remove(position);
-//
-//                final Dialog dialog = new Dialog(ShowTerminalActivity.this);
-//                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-//                dialog.setContentView(R.layout.layout_dialog_delete);
 
                 // custom dialog
                 final Dialog dialog = new Dialog(ShowTerminalActivity.this);
@@ -279,8 +245,7 @@ public class ShowTerminalActivity extends BaseActivity implements ShowTerminalCo
                     public void onClick(View v) {
                         System.out.println("YES DELETE" + terminalModel.terminalList.get(position).getTerminalId());
                         showTerminalPresenter.onDeleteTerminalAPI(terminalModel.terminalList.get(position).getTerminalId());
-//                        System.out.println("TERMINAL_ID itu ini loh : " + terminalModel.terminalList.get(position).getTerminalId());
-//                        dialog.dismiss();
+
                     }
                 });
 
@@ -305,6 +270,7 @@ public class ShowTerminalActivity extends BaseActivity implements ShowTerminalCo
 
     @Override
     public void getRefreshTerminalList() {
+        showTerminalPresenter.onGetTerminalAPI(); /* belum di test jadi gak usah intent lagi karna kasusnya kyak otomoto punya*/
         Utils.showSnackBar(llShowTerminal,"Delete Success");
         Intent refresh = new Intent(this, ShowTerminalActivity.class);
         refresh.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -317,7 +283,6 @@ public class ShowTerminalActivity extends BaseActivity implements ShowTerminalCo
         Utils.showSnackBar(llShowTerminal,mainResponse.getMessage());
     }
 
-    //INI BARU
     @Override
     public void searchMesaage(String message) {
         Utils.showSnackBar(llShowTerminal,message);
@@ -345,7 +310,6 @@ public class ShowTerminalActivity extends BaseActivity implements ShowTerminalCo
             btnSearchClick();
         }
     };
-    //SAMPAI SINI
 
     public void btnSearchClick(){
         ivSearch.setOnClickListener(new View.OnClickListener() {

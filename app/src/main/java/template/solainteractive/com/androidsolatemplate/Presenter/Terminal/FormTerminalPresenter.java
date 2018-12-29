@@ -14,9 +14,6 @@ import template.solainteractive.com.androidsolatemplate.model.RateModel;
 
 public class FormTerminalPresenter implements FormTerminalContract.Presenter {
 
-    String scanResult, name, address, metatag, timeOpen, timeClose, network, description, activeStatus, encodedImage;
-    double currLatitude, currLongitude;
-    int typeId, choosenOptionID;
 
     private FormTerminalContract.View formTerminalView;
     private FormTerminalContract.Interactor formTerminalInteractor;

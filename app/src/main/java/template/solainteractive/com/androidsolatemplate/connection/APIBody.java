@@ -50,7 +50,7 @@ public class APIBody {
         return logout;
     }
 
-    public static Map<String, String> deleteBody(String terminalId){
+    public static Map<String, String> deleteTerminalBody(String terminalId){
         Map<String, String> delete = new HashMap<>();
         delete.put(Constants.APIObject.TERMINAL_ID, terminalId);
         return delete;

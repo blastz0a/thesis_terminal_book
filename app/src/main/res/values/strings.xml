@@ -10,8 +10,6 @@
     <string name="name">Name</string>
     <string name="login_facebook">Log in with Facebook</string>
     <string name="login_google">Sign in with Google</string>
-    <string name="change_password_success">Success change password</string>
-    <string name="forget_password">Please check your email</string>
 
     <!--FIREBASE REMOTE CONFIG DIALOG-->
     <string name="maintenance_title">Maintenance is underway</string>
@@ -21,4 +19,30 @@
     <string name="update_button_title">Update</string>
     <string name="continue_button_title">Continue</string>
     <string name="title_activity_maps">Map</string>
+
+    <!--SIGN IN-->
+    <string name="email_must_be_filled">Email Must be Filled !</string>
+    <string name="email_must_be_matched_with_email_pattern">Email Must be Matched With Email Pattern !</string>
+    <string name="password_must_be_filled">Password Must be Filled !</string>
+    <string name="password_between_4_and_8">Password Must be Between 4 and 8 !</string>
+
+    <!--CHANGE PASSWORD-->
+    <string name="title_activity_change_password">Change Password</string>
+    <string name="change_password_success">Success change password</string>
+    <string name="change_password_failed">Failed change password</string>
+
+    <!--FORGET PASSWORD-->
+    <string name="title_forget_password">Forget Password</string>
+    <string name="input_email">Please input your email</string>
+    <string name="email_not_match">Your email does not match email pattern</string>
+    <string name="check_email">Please check your email</string>
+
+    <!--TERMINAL-->
+    <string name="update">UPDATE</string>
+    <string name="avatar_must_be_in_landscape_mode">Avatar Must be in Landscape Mode !</string>
+
+    <!--MESSAGE-->
+    <string name="keywords_not_match">Your Keywords does not match! input another keywords</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="go_to_settings">Go to Settings and Enable Permissions</string>
 </resources>

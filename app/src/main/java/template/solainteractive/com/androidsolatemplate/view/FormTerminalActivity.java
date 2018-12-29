@@ -262,7 +262,7 @@ public class FormTerminalActivity extends BaseActivity implements FormTerminalCo
             BundleExist();
             enableUpdateBtn();
             btnScan.setVisibility(View.GONE);
-            btnUpload.setText("UPDATE");
+            btnUpload.setText(getString(R.string.update));
         }
 
         etName.addTextChangedListener(new EditTextListener());
@@ -400,7 +400,8 @@ public class FormTerminalActivity extends BaseActivity implements FormTerminalCo
 
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
-                    Toast.makeText(this, "Something went wrong", Toast.LENGTH_LONG).show();
+                    Utils.showSnackBar(form, getString(R.string.something_went_wrong));
+                    //Toast.makeText(this, "Something went wrong", Toast.LENGTH_LONG).show();
                 }
             } else if (requestCode == CAMERA_REQUEST) {
                 compressImage();
@@ -516,7 +517,6 @@ public class FormTerminalActivity extends BaseActivity implements FormTerminalCo
             btnUpload.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    postUpdateTerminalAPI();
                     System.out.println("id : " + scanResult);
                     System.out.println("typeID : " + typeID);
                     System.out.println("name : " + name);
@@ -531,6 +531,7 @@ public class FormTerminalActivity extends BaseActivity implements FormTerminalCo
                     System.out.println("long : " + currLongitude);
                     System.out.println("active : " + activeStatus);
                     System.out.println("RateID : " + choosenOptionID);
+                    postUpdateTerminalAPI();
                 }
             });
         }
@@ -566,7 +567,7 @@ public class FormTerminalActivity extends BaseActivity implements FormTerminalCo
 
                 // set the custom dialog components - text, image and button
                 TextView text = dialog.findViewById(R.id.txt_dia);
-                text.setText("Avatar must be in landscape mode!");
+                text.setText(getString(R.string.avatar_must_be_in_landscape_mode));
 
                 Button btnCapture = dialog.findViewById(R.id.btn_capture);
                 Button btnGallery = dialog.findViewById(R.id.btn_gallery);
@@ -727,7 +728,7 @@ public class FormTerminalActivity extends BaseActivity implements FormTerminalCo
     public void setOnSuccessPostTerminalAPI(MainResponse mainResponse) {
         dismissProgressDialog();
         Utils.showSnackBar(tvID, mainResponse.getMessage());
-        Toast.makeText(FormTerminalActivity.this, "SUCCESS", Toast.LENGTH_LONG).show();
+        //Toast.makeText(FormTerminalActivity.this, "SUCCESS", Toast.LENGTH_LONG).show();
         Intent openIntent = new Intent(FormTerminalActivity.this, ShowTerminalActivity.class);
         openIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         getApplicationContext().startActivity(openIntent);
@@ -749,7 +750,7 @@ public class FormTerminalActivity extends BaseActivity implements FormTerminalCo
     public void setOnSuccessUpdateTerminalAPI(MainResponse mainResponse) {
         dismissProgressDialog();
         Utils.showSnackBar(tvID, mainResponse.getMessage());
-        Toast.makeText(FormTerminalActivity.this, "SUCCESS", Toast.LENGTH_LONG).show();
+       // Toast.makeText(FormTerminalActivity.this, "SUCCESS", Toast.LENGTH_LONG).show();
         Intent openIntent = new Intent(FormTerminalActivity.this, ShowTerminalActivity.class);
         openIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         getApplicationContext().startActivity(openIntent);
@@ -759,7 +760,7 @@ public class FormTerminalActivity extends BaseActivity implements FormTerminalCo
     public void setOnFailedUpdateTerminalAPI(String message) {
         dismissProgressDialog();
         Utils.showSnackBar(tvID, message);
-        Toast.makeText(FormTerminalActivity.this, message, Toast.LENGTH_LONG).show();
+        //Toast.makeText(FormTerminalActivity.this, message, Toast.LENGTH_LONG).show();
         Intent openIntent = new Intent(FormTerminalActivity.this, ShowTerminalActivity.class);
         openIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         getApplicationContext().startActivity(openIntent);
@@ -1076,7 +1077,8 @@ public class FormTerminalActivity extends BaseActivity implements FormTerminalCo
                         //permission is denied (and never ask again is  checked)
                         //shouldShowRequestPermissionRationale will return false
                         else {
-                            Toast.makeText(this, "Go to settings and enable permissions", Toast.LENGTH_LONG).show();
+                            Utils.showSnackBar(form, getString(R.string.go_to_settings));
+                            //Toast.makeText(this, "Go to settings and enable permissions", Toast.LENGTH_LONG).show();
                             //proceed with logic by disabling the related features or quit the app.
                         }
                     }

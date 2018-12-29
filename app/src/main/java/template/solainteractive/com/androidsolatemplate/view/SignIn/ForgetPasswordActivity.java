@@ -55,37 +55,11 @@ public class ForgetPasswordActivity extends BaseActivity implements ForgetPasswo
                 email = emailTxt.getText().toString();
 
                 if (email.isEmpty()) {
-                    Utils.showSnackBar(ll_forgetPassword,"Please input your email");
+                    Utils.showSnackBar(ll_forgetPassword,getString(R.string.input_email));
                 } else if (!email.matches(emailPattern)) {
-                    Utils.showSnackBar(ll_forgetPassword,"Your email input does not match pattern");
+                    Utils.showSnackBar(ll_forgetPassword,getString(R.string.email_not_match));
                 } else {
                     forgetPasswordPresenter.setForgetPassword(email);
-
-//                    Call call = RetrofitServices.retrofitRequest().forgetPassword(APIBody.forgetPassword(email));
-//                    ConnectionManager connectionManager = new ConnectionManager(ForgetPasswordActivity.this);
-//                    connectionManager.connect(call, new ConnectionCallback() {
-//                        @Override
-//                        public void onSuccessResponse(Call call, Response response) {
-//                            btnForgetPassword.setEnabled(false);
-//                            Utils.showInfiniteSnackBar(ll_forgetPassword, getString(R.string.forget_password), "OK", new SnackBarOnClick() {
-//                                @Override
-//                                public void onSnackBarClick() {
-//                                    onBackPressed();
-//                                }
-//                            });
-//
-//                        }
-//
-//                        @Override
-//                        public void onFailedResponse(Call call, Response response, String message) {
-//                            Utils.showSnackBar(ll_forgetPassword, message);
-//                        }
-//
-//                        @Override
-//                        public void onFailure(String message) {
-//
-//                        }
-//                    });
                 }
             }
         });
@@ -104,7 +78,7 @@ public class ForgetPasswordActivity extends BaseActivity implements ForgetPasswo
     public void setOnSuccessForgetPassword() {
         emailTxt.setText("");
         btnForgetPassword.setEnabled(false);
-        Utils.showInfiniteSnackBar(ll_forgetPassword, getString(R.string.forget_password), "OK", new SnackBarOnClick() {
+        Utils.showInfiniteSnackBar(ll_forgetPassword, getString(R.string.check_email), "OK", new SnackBarOnClick() {
             @Override
             public void onSnackBarClick() {
                 onBackPressed();
@@ -119,6 +93,6 @@ public class ForgetPasswordActivity extends BaseActivity implements ForgetPasswo
 
     @Override
     public void setUpView() {
-        Utils.setupAppToolbarForActivity(ForgetPasswordActivity.this, toolbarList, "Forget Password");
+        Utils.setupAppToolbarForActivity(ForgetPasswordActivity.this, toolbarList, getString(R.string.title_forget_password));
     }
 }

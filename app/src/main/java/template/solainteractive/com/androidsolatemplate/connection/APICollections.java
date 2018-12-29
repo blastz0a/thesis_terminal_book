@@ -41,7 +41,7 @@ public interface APICollections {
     Call<MainResponse> forgetPassword(@Body Map<String, String> body);
 
     @POST(Constants.URL_API.DELETE)
-    Call<MainResponse> delete(@Body Map<String, String> body);
+    Call<MainResponse> deleteTerminal(@Body Map<String, String> body);
 
     // GET API
     @GET(Constants.URL_API.GET_TERMINAL_URL)

@@ -13,15 +13,13 @@ public interface ShowTerminalContract {
     interface View extends BaseView {
         void setAdapter(TerminalModel terminalModel, List<Terminal> terminalList);
         void intentToSignInActivity(String message);
-        void showSnackbar();
+        void showSnackbar(String message);
         void setOnClick(TerminalModel terminalModel, List<Terminal> terminalList);
         void intentToSignInActivityforLogout();
         void getRefreshTerminalList();
-        //INI BARU
         void showStatusMessage(MainResponse mainResponse);
         void searchMesaage(String message);
         void emptyData();
-        //SAMPAI SINI
     }
 
     interface Presenter{
@@ -38,7 +36,6 @@ public interface ShowTerminalContract {
         void onFailedPostLogout(String message);
         void onFailurePostLogout(String message);
         void onSuccessDeleteTerminal(MainResponse mainResponse);
-        //INI BARU
         void onFailedDeleteTerminal(MainResponse mainResponse);
         void onSearchTerminal(String SEARCH_KEYWORDS);
         void onSuccessSearchTerminal(TerminalModel terminalModel, List<Terminal> terminalList);
