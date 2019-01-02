@@ -62,4 +62,8 @@ public class Utils {
         mActivity.getSupportActionBar().setTitle("");
         mActivity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
+    public static void setupAppToolbarForActivity2(final AppCompatActivity mActivity, String title){
+        TextView tvTitle = mActivity.findViewById(R.id.tvToolbar);
+        tvTitle.setText(title);
+    }
 }

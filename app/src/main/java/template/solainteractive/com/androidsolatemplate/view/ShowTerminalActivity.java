@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
-import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -25,8 +24,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -43,13 +40,12 @@ import template.solainteractive.com.androidsolatemplate.model.Terminal;
 import template.solainteractive.com.androidsolatemplate.model.TerminalModel;
 import template.solainteractive.com.androidsolatemplate.view.SignIn.ChangePasswordActivity;
 import template.solainteractive.com.androidsolatemplate.view.SignIn.SigninActivity;
-import template.solainteractive.com.androidsolatemplate.view_interface.SnackBarOnClick;
 
 
 public class ShowTerminalActivity extends BaseActivity implements ShowTerminalContract.View {
 
-    @BindView(R.id.toolbar_title)
-    ImageView toolbarTitle;
+//    @BindView(R.id.toolbar_title)
+//    ImageView toolbarTitle;
     @BindView(R.id.toolbarList)
     Toolbar toolbarList;
     @BindView(R.id.llShowTerminal)
@@ -82,6 +78,8 @@ public class ShowTerminalActivity extends BaseActivity implements ShowTerminalCo
     TextView emptyDataText;
     @BindView(R.id.tv_empty_data_line2)
     TextView emptyDataText2;
+    @BindView(R.id.tvToolbar)
+    TextView tvToolbar;
 
 
     private ShowTerminalContract.Presenter showTerminalPresenter;
@@ -98,11 +96,11 @@ public class ShowTerminalActivity extends BaseActivity implements ShowTerminalCo
         recyclerView.setHasFixedSize(true);
         recyclerView.setNestedScrollingEnabled(false);
 
-        setSupportActionBar(toolbarList);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-
         MyApplication.getInstance().getLoginStatus();
 
+
+        Utils.setupAppToolbarForActivity2(ShowTerminalActivity.this,"Terminal List");
+        setSupportActionBar(toolbarList);
 
         showTerminalPresenter.onGetTerminalAPI();
 
@@ -192,7 +190,7 @@ public class ShowTerminalActivity extends BaseActivity implements ShowTerminalCo
 
     @Override
     public void intentToSignInActivity(String message) {
-        Utils.showSnackBar(llShowTerminal,message);
+        Utils.showSnackBar(llShowTerminal, message);
         Intent i = new Intent(ShowTerminalActivity.this, SigninActivity.class);
         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(i);
@@ -201,7 +199,7 @@ public class ShowTerminalActivity extends BaseActivity implements ShowTerminalCo
 
     @Override
     public void showSnackbar() {
-        Utils.showSnackBar(llShowTerminal,"No Internet Connection");
+        Utils.showSnackBar(llShowTerminal, "No Internet Connection");
     }
 
     @Override
@@ -316,7 +314,7 @@ public class ShowTerminalActivity extends BaseActivity implements ShowTerminalCo
 //            }
 //        });
 //        Utils.showSnackBar(llShowTerminal,"Delete Success");
-        Toast.makeText(this,"Success Delete Terminal",Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Success Delete Terminal", Toast.LENGTH_LONG).show();
         Intent refresh = new Intent(this, ShowTerminalActivity.class);
         refresh.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(refresh);
@@ -325,13 +323,13 @@ public class ShowTerminalActivity extends BaseActivity implements ShowTerminalCo
 
     @Override
     public void showStatusMessage(MainResponse mainResponse) {
-        Utils.showSnackBar(llShowTerminal,mainResponse.getMessage());
+        Utils.showSnackBar(llShowTerminal, mainResponse.getMessage());
     }
 
     //INI BARU
     @Override
     public void searchMesaage(String message) {
-        Utils.showSnackBar(llShowTerminal,message);
+        Utils.showSnackBar(llShowTerminal, message);
     }
 
     @Override
@@ -358,12 +356,12 @@ public class ShowTerminalActivity extends BaseActivity implements ShowTerminalCo
     };
     //SAMPAI SINI
 
-    public void btnSearchClick(){
+    public void btnSearchClick() {
         ivSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 keywords = searchText.getText().toString();
-                if (keywords == ""){
+                if (keywords == "") {
                     showTerminalPresenter.onGetTerminalAPI();
                 }
                 showTerminalPresenter.onSearchTerminal(keywords);

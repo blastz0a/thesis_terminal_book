@@ -99,8 +99,8 @@ public class MapListActivity extends AppCompatActivity implements MapListContrac
     RelativeLayout llMap;
     @BindView(R.id.btnGetDirection)
     Button btnGetDirection;
-    @BindView(R.id.toolbar_title)
-    ImageView toolbarTitle;
+//    @BindView(R.id.toolbar_title)
+//    ImageView toolbarTitle;
     @BindView(R.id.toolbarList)
     Toolbar toolbarList;
     @BindView(R.id.ic_terminal_address)
@@ -133,6 +133,7 @@ public class MapListActivity extends AppCompatActivity implements MapListContrac
         ButterKnife.bind(this);
 
         mapListPresenter = new MapListPresenter(this);
+        Utils.setupAppToolbarForActivity(MapListActivity.this,toolbarList,"Terminal Map View");
         setSupportActionBar(toolbarList);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         toolbarList.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);

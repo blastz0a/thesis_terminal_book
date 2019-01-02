@@ -60,8 +60,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     ImageView ivMyLoc;
     @BindView(R.id.toolbarList)
     Toolbar toolbarList;
-    @BindView(R.id.toolbar_title)
-    ImageView toolbarTitle;
+//    @BindView(R.id.toolbar_title)
+//    ImageView toolbarTitle;
 
 
     Double lati, longi;
@@ -80,6 +80,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         setContentView(R.layout.activity_maps);
         ButterKnife.bind(this);
 
+        Utils.setupAppToolbarForActivity(MapsActivity.this,toolbarList,"Set Location");
         setSupportActionBar(toolbarList);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         toolbarList.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);

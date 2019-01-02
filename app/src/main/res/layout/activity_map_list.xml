@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context="template.solainteractive.com.androidsolatemplate.view.MapListActivity">
 
-    <include layout="@layout/layout_toolbar_2"></include>
+    <include layout="@layout/layout_toolbar_title"></include>
     <!--<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
         <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
         <!--android:layout_width="match_parent"-->

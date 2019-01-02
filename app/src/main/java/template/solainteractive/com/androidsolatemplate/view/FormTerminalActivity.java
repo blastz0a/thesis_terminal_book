@@ -227,6 +227,7 @@ public class FormTerminalActivity extends BaseActivity implements FormTerminalCo
 
         formTerminalPresenter = new FormTerminalPresenter(this);
 
+        Utils.setupAppToolbarForActivity(FormTerminalActivity.this,toolbarList,"Create New Terminal");
         tvScanResult.setText("");
         etTerminalOpen.setInputType(InputType.TYPE_NULL);
         etTerminalClose.setInputType(InputType.TYPE_NULL);
@@ -249,7 +250,6 @@ public class FormTerminalActivity extends BaseActivity implements FormTerminalCo
         setTimeClose();
 
         getRateAPI();
-        back();
 
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .addConnectionCallbacks(this)
@@ -259,6 +259,7 @@ public class FormTerminalActivity extends BaseActivity implements FormTerminalCo
         mGoogleApiClient.connect();
 
         if (this.getIntent().getExtras() != null) {
+            Utils.setupAppToolbarForActivity(FormTerminalActivity.this,toolbarList,"Update Terminal");
             BundleExist();
             enableUpdateBtn();
             btnScan.setVisibility(View.GONE);
@@ -274,6 +275,8 @@ public class FormTerminalActivity extends BaseActivity implements FormTerminalCo
         etPostalCode.addTextChangedListener(new EditTextListener());
         etDescription.addTextChangedListener(new EditTextListener());
         radioGroupValidation();
+
+        back();
 
     }
 
