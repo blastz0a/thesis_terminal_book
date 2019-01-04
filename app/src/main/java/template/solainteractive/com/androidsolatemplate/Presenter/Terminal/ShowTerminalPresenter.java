@@ -34,6 +34,7 @@ public class ShowTerminalPresenter implements ShowTerminalContract.Presenter{
 
     @Override
     public void onPostLogoutAPI() {
+        showTerminalView.showProgressDialog();
         Call call = RetrofitServices.retrofitRequest().logout(APIBody.logoutBody(email, password));
         showTerminalInteractor.initRetrofitPostLogoutAPI(call);
     }
@@ -71,6 +72,7 @@ public class ShowTerminalPresenter implements ShowTerminalContract.Presenter{
 
     @Override
     public void onSuccessPostLogout(MainResponse mainResponse) {
+
         MyApplication.getInstance().setLogout();
         showTerminalView.intentToSignInActivityforLogout();
     }

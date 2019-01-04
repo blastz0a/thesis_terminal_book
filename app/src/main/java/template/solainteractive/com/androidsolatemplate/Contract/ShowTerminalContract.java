@@ -21,6 +21,7 @@ public interface ShowTerminalContract {
         void showStatusMessage(MainResponse mainResponse);
         void searchMesaage(String message);
         void emptyData();
+        void signOutDialogConfirmation();
         //SAMPAI SINI
     }
 

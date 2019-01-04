@@ -153,7 +153,7 @@ public class ShowTerminalActivity extends BaseActivity implements ShowTerminalCo
                 startActivity(changePassword);
                 break;
             case R.id.btnSignOut:
-                showTerminalPresenter.onPostLogoutAPI();
+                signOutDialogConfirmation();
                 break;
             default:
                 break;
@@ -336,6 +336,32 @@ public class ShowTerminalActivity extends BaseActivity implements ShowTerminalCo
     public void emptyData() {
         emptyData.setVisibility(View.VISIBLE);
         llShowTerminal.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void signOutDialogConfirmation() {
+        final  Dialog dialog = new Dialog(ShowTerminalActivity.this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.layout_dialog_signout);
+
+        Button btnYes = dialog.findViewById(R.id.btnYes);
+        Button btnNo = dialog.findViewById(R.id.btnNo);
+
+        btnYes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showTerminalPresenter.onPostLogoutAPI();
+            }
+        });
+
+        btnNo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
     }
 
     //INI UNTUK CEK PER KATA KIRIM KE API UNTUK SEARCH

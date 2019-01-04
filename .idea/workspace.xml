@@ -24,9 +24,9 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/FormTerminalActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/FormTerminalActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_show_terminal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_show_terminal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/Contract/ShowTerminalContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/Contract/ShowTerminalContract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/Presenter/Terminal/ShowTerminalPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/Presenter/Terminal/ShowTerminalPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/ShowTerminalActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/ShowTerminalActivity.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -69,23 +69,39 @@
       <file leaf-file-name="ShowTerminalActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/ShowTerminalActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="294" column="30" selection-start-line="294" selection-start-column="30" selection-end-line="294" selection-end-column="30" />
+            <state relative-caret-position="235">
+              <caret line="352" column="49" selection-start-line="352" selection-start-column="49" selection-end-line="352" selection-end-column="49" />
               <folding>
                 <element signature="e#11937#12568#0" expanded="true" />
                 <element signature="e#12567#12568#0" expanded="true" />
                 <element signature="e#12635#12825#0" expanded="true" />
                 <element signature="e#12824#12825#0" expanded="true" />
+                <element signature="e#14700#14873#0" expanded="true" />
+                <element signature="e#14872#14873#0" expanded="true" />
+                <element signature="e#14882#15032#0" expanded="true" />
+                <element signature="e#15031#15032#0" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout_dialog_signout.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_dialog_signout.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="layout_dialog_delete.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_dialog_delete.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+            <state relative-caret-position="187">
+              <caret line="11" column="44" selection-end-line="54" />
             </state>
           </provider>
           <provider editor-type-id="android-designer2">
@@ -93,23 +109,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout_dialog_direct_back.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_dialog_direct_back.xml">
+      <file leaf-file-name="ShowTerminalContract.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/Contract/ShowTerminalContract.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+            <state relative-caret-position="150">
+              <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
             </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MapsActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/MapsActivity.java">
+      <file leaf-file-name="ShowTerminalInteractor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/Presenter/Terminal/ShowTerminalInteractor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="59" column="22" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
+            <state relative-caret-position="161">
+              <caret line="52" column="51" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShowTerminalPresenter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/Presenter/Terminal/ShowTerminalPresenter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="167">
+              <caret line="74" column="8" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -152,7 +174,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Dispatch</find>
       <find>ic_terminal_latitude</find>
       <find>onGetTerminal</find>
       <find>tv_terminal</find>
@@ -182,6 +203,7 @@
       <find>toolbarTitle</find>
       <find>toolbarList</find>
       <find>Dialog</find>
+      <find>margin</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -3538,7 +3560,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/controller/TerminalAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/SignIn/SigninActivity.java" />
         <option value="$PROJECT_DIR$/app/src/test/java/template/solainteractive/com/androidsolatemplate/Terminal/ShowTerminalPresenterTest.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/Presenter/Terminal/ShowTerminalPresenter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_toolbar.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_toolbar_title.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_change_password.xml" />
@@ -3549,7 +3570,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_map_list.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/MapListActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/Utils/Utils.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/ShowTerminalActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_maps.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/MapsActivity.java" />
@@ -3560,6 +3580,10 @@
         <option value="$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/Constants.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/FormTerminalActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_dialog_direct_back.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/Contract/ShowTerminalContract.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_dialog_signout.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/ShowTerminalActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/Presenter/Terminal/ShowTerminalPresenter.java" />
       </list>
     </option>
   </component>
@@ -3605,7 +3629,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="consta&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/Constants.java&#10;layout_dial&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/res/layout/layout_dialog_delete.xml&#10;MainResponse&#9;PSI&#9;JAVA://template.solainteractive.com.androidsolatemplate.model.MainResponse&#10;SignIn&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/SignIn/SigninActivity.java&#10;Constan&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/Constants.java&#10;background&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/res/drawable/background.jpg&#10;sho&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/res/layout/activity_show_terminal.xml&#10;Show&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/ShowTerminalActivity.java&#10;Constant&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/Constants.java&#10;form&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/res/layout/activity_form_terminal.xml&#10;MapsActivity&#9;PSI&#9;JAVA://template.solainteractive.com.androidsolatemplate.view.MapsActivity&#10;MapLi&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/MapListActivity.java&#10;splash&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/res/layout/activity_splash.xml&#10;Form&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/FormTerminalActivity.java&#10;Map&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/MapListActivity.java&#10;show&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/res/layout/activity_show_terminal.xml&#10;Con&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/Constants.java&#10;Consta&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/Constants.java&#10;s&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/res/layout/activity_show_terminal.xml&#10;ShowTer&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/ShowTerminalActivity.java&#10;Change&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/SignIn/ChangePasswordActivity.java&#10;change&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/res/layout/activity_change_password.xml&#10;layout&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/res/layout/layout_toolbar.xml&#10;ShowTerm&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/ShowTerminalActivity.java&#10;ChangePassword&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/SignIn/ChangePasswordActivity.java&#10;forg&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/res/layout/activity_forget_password.xml&#10;sign&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/res/layout/activity_signin.xml&#10;forget&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/res/layout/activity_forget_password.xml&#10;login&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/res/layout/activity_login.xml&#10;Forgot&#9;PSI&#9;JAVA://template.solainteractive.com.androidsolatemplate.SignIn.ForgotPasswordPresenterTest&#10;ShowTermina&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/ShowTerminalActivity.java&#10;ShowTerminal&#9;PSI&#9;JAVA://template.solainteractive.com.androidsolatemplate.Terminal.ShowTerminalPresenterTest&#10;button_&#9;FILE&#9;file://C:/Users/admin/AppData/Local/Android/Sdk/platforms/android-27/data/res/drawable/button_inset.xml&#10;MapList&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/MapListActivity.java&#10;constants&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/Constants.java&#10;Sign&#9;PSI&#9;JAVA://template.solainteractive.com.androidsolatemplate.Presenter.SignIn.SigninPresenter&#10;constan&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/Constants.java&#10;ShowTerminalPresenter&#9;PSI&#9;JAVA://template.solainteractive.com.androidsolatemplate.Presenter.Terminal.ShowTerminalPresenter&#10;Sho&#9;PSI&#9;JAVA://template.solainteractive.com.androidsolatemplate.view.ShowTerminalActivity" />
+    <property name="SearchEverywhereHistoryKey" value="ShowTerminalCo&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/Contract/ShowTerminalContract.java&#10;consta&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/Constants.java&#10;layout_dial&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/res/layout/layout_dialog_delete.xml&#10;MainResponse&#9;PSI&#9;JAVA://template.solainteractive.com.androidsolatemplate.model.MainResponse&#10;SignIn&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/SignIn/SigninActivity.java&#10;Constan&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/Constants.java&#10;background&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/res/drawable/background.jpg&#10;sho&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/res/layout/activity_show_terminal.xml&#10;Show&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/ShowTerminalActivity.java&#10;Constant&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/Constants.java&#10;form&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/res/layout/activity_form_terminal.xml&#10;MapsActivity&#9;PSI&#9;JAVA://template.solainteractive.com.androidsolatemplate.view.MapsActivity&#10;MapLi&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/MapListActivity.java&#10;splash&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/res/layout/activity_splash.xml&#10;Form&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/FormTerminalActivity.java&#10;Map&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/MapListActivity.java&#10;show&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/res/layout/activity_show_terminal.xml&#10;Con&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/Constants.java&#10;Consta&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/Constants.java&#10;s&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/res/layout/activity_show_terminal.xml&#10;ShowTer&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/ShowTerminalActivity.java&#10;Change&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/SignIn/ChangePasswordActivity.java&#10;change&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/res/layout/activity_change_password.xml&#10;layout&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/res/layout/layout_toolbar.xml&#10;ShowTerm&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/ShowTerminalActivity.java&#10;ChangePassword&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/SignIn/ChangePasswordActivity.java&#10;forg&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/res/layout/activity_forget_password.xml&#10;sign&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/res/layout/activity_signin.xml&#10;forget&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/res/layout/activity_forget_password.xml&#10;login&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/res/layout/activity_login.xml&#10;Forgot&#9;PSI&#9;JAVA://template.solainteractive.com.androidsolatemplate.SignIn.ForgotPasswordPresenterTest&#10;ShowTermina&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/ShowTerminalActivity.java&#10;ShowTerminal&#9;PSI&#9;JAVA://template.solainteractive.com.androidsolatemplate.Terminal.ShowTerminalPresenterTest&#10;button_&#9;FILE&#9;file://C:/Users/admin/AppData/Local/Android/Sdk/platforms/android-27/data/res/drawable/button_inset.xml&#10;MapList&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/MapListActivity.java&#10;constants&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/Constants.java&#10;Sign&#9;PSI&#9;JAVA://template.solainteractive.com.androidsolatemplate.Presenter.SignIn.SigninPresenter&#10;constan&#9;FILE&#9;file://D:/Project/Thesis_terminal_book/thesis_terminal_book/app/src/main/java/template/solainteractive/com/androidsolatemplate/Constants.java&#10;ShowTerminalPresenter&#9;PSI&#9;JAVA://template.solainteractive.com.androidsolatemplate.Presenter.Terminal.ShowTerminalPresenter&#10;Sho&#9;PSI&#9;JAVA://template.solainteractive.com.androidsolatemplate.view.ShowTerminalActivity" />
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
@@ -3749,7 +3773,7 @@
       <window_info id="Build Variants" order="2" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50067115" side_tool="true" weight="0.32884097" />
-      <window_info active="true" anchor="right" id="Preview" order="3" visible="true" weight="0.27785236" />
+      <window_info anchor="right" id="Preview" order="3" weight="0.27785236" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
@@ -3758,7 +3782,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24966443" />
-      <window_info anchor="bottom" id="Build" order="7" visible="true" weight="0.32884097" />
+      <window_info active="true" anchor="bottom" id="Build" order="7" visible="true" weight="0.32884097" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Gradle" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -3811,17 +3835,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/Contract/SigninContract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-27/android/widget/TextView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-71">
@@ -3884,27 +3901,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/Presenter/Terminal/ShowTerminalInteractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="77" column="48" selection-start-line="77" selection-start-column="48" selection-end-line="77" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/Presenter/Terminal/ShowTerminalPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1445">
-          <caret line="97" column="36" selection-start-line="97" selection-start-column="36" selection-end-line="97" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/Contract/ShowTerminalContract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -4181,33 +4177,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_dialog_delete.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="53" column="57" selection-start-line="53" selection-start-column="57" selection-end-line="53" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/ShowTerminalActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="294" column="30" selection-start-line="294" selection-start-column="30" selection-end-line="294" selection-end-column="30" />
-          <folding>
-            <element signature="e#11937#12568#0" expanded="true" />
-            <element signature="e#12567#12568#0" expanded="true" />
-            <element signature="e#12635#12825#0" expanded="true" />
-            <element signature="e#12824#12825#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4228,12 +4201,70 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_dialog_direct_back.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+        <state relative-caret-position="85">
+          <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_dialog_delete.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="44" selection-end-line="54" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_dialog_signout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/view/ShowTerminalActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="352" column="49" selection-start-line="352" selection-start-column="49" selection-end-line="352" selection-end-column="49" />
+          <folding>
+            <element signature="e#11937#12568#0" expanded="true" />
+            <element signature="e#12567#12568#0" expanded="true" />
+            <element signature="e#12635#12825#0" expanded="true" />
+            <element signature="e#12824#12825#0" expanded="true" />
+            <element signature="e#14700#14873#0" expanded="true" />
+            <element signature="e#14872#14873#0" expanded="true" />
+            <element signature="e#14882#15032#0" expanded="true" />
+            <element signature="e#15031#15032#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/Presenter/Terminal/ShowTerminalInteractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="52" column="51" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/Contract/ShowTerminalContract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/template/solainteractive/com/androidsolatemplate/Presenter/Terminal/ShowTerminalPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="74" column="8" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
+        </state>
       </provider>
     </entry>
   </component>
