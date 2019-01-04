@@ -336,7 +336,27 @@ public class FormTerminalActivity extends BaseActivity implements FormTerminalCo
         toolbarList.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                final Dialog dialog = new Dialog(FormTerminalActivity.this);
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialog.setContentView(R.layout.layout_dialog_direct_back);
+
+                Button btnYes = dialog.findViewById(R.id.btnYes);
+                Button btnNo = dialog.findViewById(R.id.btnNo);
+
+                btnYes.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        finish();
+                    }
+                });
+
+                btnNo.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.show();
             }
         });
     }
